@@ -1,0 +1,301 @@
+(base) ozguryildirim@OZGURs-MacBook-Pro ~ % mkdir IH-Labs
+(base) ozguryildirim@OZGURs-MacBook-Pro ~ % ls
+Applications		Library			folder1
+Creative Cloud Files	Movies			folder2
+Desktop			Music			my-files
+Documents		OneDrive		opt
+Downloads		Pictures		temp
+IH-Labs			Public
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % git clone https://github.com/ltaylanozgur/lab-bash.git
+Cloning into 'lab-bash'...
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 40 (delta 14), reused 10 (delta 10), pack-reused 17
+Unpacking objects: 100% (40/40), done.
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % ls
+lab-bash
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % cd lab-bash
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % echo 'Hello World'
+Hello World
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % mkdir new_dir
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	new_dir		outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % git add .
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % echo 'Hello World'
+Hello World
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % mkdir new_dir
+mkdir: new_dir: File exists
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % rm -r new_dir
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem  
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cp sed.txt lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cp at.txt;lorem.txt lorem-copy
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+zsh: command not found: lorem.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cp at.txt lorem-copy;cp at.txte lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd lorem-copy
+cd: not a directory: lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd lorem-copy/
+cd: not a directory: lorem-copy/
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd..
+zsh: command not found: cd..
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem-copy/
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+dummy_file.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cp /Users/ltaylanozgur/IH-Labs/lab-bash/lorem/at.txt /Users/ltaylanozgur/IH-Labs/lab-bash/lorem-copy/; cp /Users/ltaylanozgur/IH-Lbas/lab-bash/lorem/lorem.txt /Users/ltaylanozgur/IH-Labs/lab-bash/lorem-copy/
+cp: directory /Users/ltaylanozgur/IH-Labs/lab-bash/lorem-copy does not exist
+cp: directory /Users/ltaylanozgur/IH-Labs/lab-bash/lorem-copy does not exist
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cp /Users/ozguryildirim/IH-Labs/lab-bash/lorem /Users/ozguryildirim/IH-Labs/lab-bash/lorem-copy/; cp /Users/ozguryildirim/IH-Labs/lab-bash/lorem /Users/ozguryildirim/IH-Labs/lab-bash/lorem-copy/
+cp: /Users/ozguryildirim/IH-Labs/lab-bash/lorem is a directory (not copied).
+cp: /Users/ozguryildirim/IH-Labs/lab-bash/lorem is a directory (not copied).
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cp /Users/ozguryildirim/IH-Labs/lab-bash/lorem/at.txt /Users/ozguryildirim/IH-Labs/lab-bash/lorem-copy/; cp /Users/ozguryildirim/IH-Labs/lab-bash/lorem/lorem.txt /Users/ozguryildirim/IH-Labs/lab-bash/lorem-copy/
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % cd lorem-copy
+cd: no such file or directory: lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % cd lorem-copy/
+cd: no such file or directory: lorem-copy/
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro ~ % ls
+Applications		Documents		Library			OneDrive		folder1			opt
+Creative Cloud Files	Downloads		Movies			Pictures		folder2			temp
+Desktop			IH-Labs			Music			Public			my-files
+(base) ozguryildirim@OZGURs-MacBook-Pro ~ % cd IH-Labs
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % ls
+lab-bash
+(base) ozguryildirim@OZGURs-MacBook-Pro IH-Labs % cd lab-bash
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+at.txt		dummy_file.txt	lorem.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cat at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cat lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%                                                                      (base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+at.txt		dummy_file.txt	lorem.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % copy sed.txt lorem-copy
+zsh: command not found: copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cp sed.txt lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+at.txt		dummy_file.txt	lorem.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cd .. 
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cp sed.txt lorem-copy/
+cp: lorem-copy is not a directory
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cp sed.txt lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+at.txt		dummy_file.txt	lorem.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cp /Users/ozguryildirim/IH-Labs/lab-bash/lorem/sed.txt /Users/ltaylanozgur/IH-Labs/lab-bash/lorem-copy/
+cp: directory /Users/ltaylanozgur/IH-Labs/lab-bash/lorem-copy does not exist
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cp /Users/ozguryildirim/IH-Labs/lab-bash/lorem/sed.txt /Users/ozguryildirim/IH-Labs/lab-bash/lorem-copy/ 
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem-copy
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+at.txt		dummy_file.txt	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % head -n3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % tail -3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % echo "Homo homini lupus." >>sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cat -n sed.txt
+     1	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+     2	totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+     3	Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+     4	sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+     5	Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+     6	sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+     7	Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+     8	nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+     9	vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+    10	Homo homini lupus.
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % head -n3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % tail -3 sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % sed -i -r 's/ET/et/' at.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % sed -i -r 's/et/ET/' at.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % sed -i 's/et/ET/' at.txt
+sed: 1: "at.txt": command a expects \ followed by text
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % sed 's/et/ET/' at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % sed -i 's/et/ET/g' at.txt
+sed: 1: "at.txt": command a expects \ followed by text
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cat at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % dscl . list /Users | grep -v '_'
+com.malwarebytes.mbam.nobody
+daemon
+macports
+nobody
+ozguryildirim
+root
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % ls
+at.txt		at.txt-r	dummy_file.txt	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem-copy % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % pwd
+/Users/ozguryildirim/IH-Labs/lab-bash
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % cd lorem
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls *.txt
+at.txt		lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % wc -l sed.txt
+       9 sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % wc -l /Users/ozguryildirim/IH-Labs/lab-bash/lorem/sed.txt
+       9 /Users/ozguryildirim/IH-Labs/lab-bash/lorem/sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % whoami
+ozguryildirim
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % ls 
+at.txt		at.txte		lorem-copy	lorem.txt	sed.txt
+(base) ozguryildirim@OZGURs-MacBook-Pro lorem % cd ..
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls lorem | wc -l
+       5
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % read
+
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % 
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % read var1
+Ozgur
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % echo $var1
+Ozgur
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % mkdir $var1
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+Ozgur		exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % rm -r $var1
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) ozguryildirim@OZGURs-MacBook-Pro lab-bash % 
